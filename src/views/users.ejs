@@ -1,0 +1,35 @@
+<%- include ('./partials/header') %>
+
+    <body>
+        <%- include ('./partials/navigation') %>
+            <div class="container">
+                <div class="row ga">
+                    <% data.forEach( user=> { %>
+                        <div class="card" style="width: min-content;">
+
+                            <div class="card-body">
+                                <div class="bg-primary d-flex justify-content-center rounded p-3 mb-2"
+                                    style="width: 350px;">
+                                    <img src="./img/user.png" alt="user icon" style="width: 10rem;">
+                                </div>
+                                <h3 class="card-title">Nombre: <%= user.name %>
+                                </h3>
+                                <h5 class="card-title">Telefono: <%= user.phone %><br>Email: <a
+                                            href="mailto:<%= user.email %>">
+                                            <%= user.email %>
+                                        </a></h5>
+                                <div class="card-text">
+                                    <%= user.description %>
+                                </div>
+                                <div class="d-flex justify-content-between mt-4">
+                                    <a href="#" class="btn btn-primary">Editar</a>
+                                    <a href="/delete/<%= user.id %>" class="btn btn-danger">Eliminar</a>
+                                </div>
+                            </div>
+                        </div>
+            <% }) %>
+        </div>
+    </div>
+    </body>
+
+    </html>

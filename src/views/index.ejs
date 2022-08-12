@@ -1,0 +1,36 @@
+<%- include ('./partials/header') %>
+
+<body> 
+    <%- include ('./partials/navigation') %>
+<div class="container">
+    <div class="row">
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group">
+                    <form action="/user_new" method="post">
+                        <div class="form-group">
+                            <label for="name" class="form-label"></label>
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Nombre" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label"></label>
+                            <input type="text" name="phone" id="phone" class="form-control" placeholder="Tel&eacute;fono" >                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label"></label>
+                            <input type="text" name="email" id="email" class="form-control" placeholder="Correo" >
+                        </div>
+                        <div class="form-group">
+                            <textarea name="description" id="description" class="form-control" rows="2"></textarea>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <input type="submit" value="Enviar" class="btn btn-primary">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

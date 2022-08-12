@@ -3,14 +3,14 @@
     <body>
         <%- include ('./partials/navigation') %>
             <div class="container">
-                <div class="row ga">
+                <div class="row gap-3">
                     <% data.forEach( user=> { %>
                         <div class="card" style="width: min-content;">
 
                             <div class="card-body">
                                 <div class="bg-primary d-flex justify-content-center rounded p-3 mb-2"
                                     style="width: 350px;">
-                                    <img src="./img/user.png" alt="user icon" style="width: 10rem;">
+                                    <img src="/img/user.png" alt="user icon" style="width: 10rem;">
                                 </div>
                                 <h3 class="card-title">Nombre: <%= user.name %>
                                 </h3>
@@ -22,7 +22,7 @@
                                     <%= user.description %>
                                 </div>
                                 <div class="d-flex justify-content-between mt-4">
-                                    <a href="#" class="btn btn-primary">Editar</a>
+                                    <a href="/get/<%= user.id %>" class="btn btn-primary">Editar</a>
                                     <a href="/delete/<%= user.id %>" class="btn btn-danger">Eliminar</a>
                                 </div>
                             </div>

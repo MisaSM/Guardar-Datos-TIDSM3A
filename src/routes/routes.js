@@ -54,7 +54,7 @@ router.post('/edituser',(req,res)=>{
             user.name = req.body.name.length == 0 ? user.name : req.body.name;
             user.phone = req.body.phone.length == 0 ? user.phone : req.body.phone;
             user.email = req.body.email.length == 0 ? user.email : req.body.email;
-            user.description = req.body.description.length == 0 ? user.description : req.body.email;
+            user.description = req.body.description.length == 0 ? user.description : req.body.description;
         } 
 
     });
